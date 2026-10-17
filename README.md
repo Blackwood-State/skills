@@ -1,6 +1,6 @@
 # Blackwood State skills
 
-Skills for 24 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
+Skills for 26 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
 
 - Install everything: `npx skills add Blackwood-State/skills` (or from the gateway: `npx skills add https://x402-gateway.blackwoodstate8.workers.dev`)
 - Claude Code: `claude plugin marketplace add Blackwood-State/skills` then `claude plugin install blackwood-paid-apis@blackwood-state-skills`
@@ -11,12 +11,12 @@ Skills for 24 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](
 |---|---|---|
 | [blackwood-webpage-markdown](skills/blackwood-webpage-markdown/SKILL.md) | you need to scrape a web page, extract content from a url or read an article as markdown for an LLM | 0.01 USDC |
 | [blackwood-sec-facts](skills/blackwood-sec-facts/SKILL.md) | you need sec filings company financials, earnings or fundamentals for a stock ticker for the last two fiscal years | 0.02 USDC |
-| [blackwood-pdf-extract](skills/blackwood-pdf-extract/SKILL.md) | you need to extract text from a pdf for document parsing, search or an LLM | up to 0.2 USDC |
+| [blackwood-pdf-extract](skills/blackwood-pdf-extract/SKILL.md) | you need to extract text from a pdf for document parsing, search or an LLM | up to 0.05 USDC |
 | [blackwood-domain-intel](skills/blackwood-domain-intel/SKILL.md) | you need a whois or domain lookup, dns records, email security checks or certificate transparency data for osint or due diligence | 0.02 USDC |
 | [blackwood-weather-forecast](skills/blackwood-weather-forecast/SKILL.md) | you need a weather forecast, temperature or precipitation for the next hours or days at a place given by coordinates | 0.003 USDC |
 | [blackwood-email-check](skills/blackwood-email-check/SKILL.md) | you need email validation or to verify email addresses (domain, MX records) before sending, signup or lead scoring | 0.005 USDC |
 | [blackwood-llm-chat](skills/blackwood-llm-chat/SKILL.md) | you need an llm chat completion for summaries, extraction or classification from a cheap open model | up to 0.03 USDC |
-| [blackwood-audio-transcribe](skills/blackwood-audio-transcribe/SKILL.md) | you need speech to text transcription or translation of an audio file at a public URL | up to 0.08 USDC |
+| [blackwood-audio-transcribe](skills/blackwood-audio-transcribe/SKILL.md) | you need speech to text transcription or translation of an audio file at a public URL | up to 0.05 USDC |
 | [blackwood-image-generate](skills/blackwood-image-generate/SKILL.md) | you need image generation or text to image from a prompt for illustrations or mockups | 0.03 USDC |
 | [blackwood-token-price](skills/blackwood-token-price/SKILL.md) | you need a crypto token price or market data for a Base token, quoted from on-chain liquidity | 0.003 USDC |
 | [blackwood-wallet-balances](skills/blackwood-wallet-balances/SKILL.md) | you need the ERC20 token balance or wallet balance of an address on Base for onchain data checks | 0.004 USDC |
@@ -33,5 +33,7 @@ Skills for 24 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](
 | [blackwood-fx-rates](skills/blackwood-fx-rates/SKILL.md) | you need currency exchange rates, forex conversion of an amount or a reference rate between two currencies | 0.005 USDC |
 | [blackwood-x402-check](skills/blackwood-x402-check/SKILL.md) | you need an x402 endpoint test or validation of a paid API before integrating or listing it | 0.007 USDC |
 | [blackwood-text-sentiment](skills/blackwood-text-sentiment/SKILL.md) | you need sentiment analysis of text such as reviews, comments or headlines in English | 0.004 USDC |
+| [blackwood-fx-history](skills/blackwood-fx-history/SKILL.md) | you need historical exchange rates, forex history or the recent trend of a currency | 0.005 USDC |
+| [blackwood-email-batch](skills/blackwood-email-batch/SKILL.md) | you need bulk email validation, email list verification or to verify email lists before a send or import | 0.02 USDC |
 
 License: MIT. Contact: blackwoodstate8@gmail.com.

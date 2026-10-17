@@ -1,0 +1,20 @@
+{
+  "name": "blackwood-paid-apis",
+  "displayName": "Blackwood State paid APIs",
+  "version": "1.0.0",
+  "description": "Skills for 24 pay-per-call APIs by Blackwood State, paid in USDC over x402.",
+  "author": {
+    "name": "Blackwood State",
+    "email": "blackwoodstate8@gmail.com"
+  },
+  "homepage": "https://x402-gateway.blackwoodstate8.workers.dev",
+  "repository": "https://github.com/Blackwood-State/skills",
+  "license": "MIT",
+  "keywords": [
+    "x402",
+    "usdc",
+    "pay-per-call",
+    "api",
+    "agents"
+  ]
+}

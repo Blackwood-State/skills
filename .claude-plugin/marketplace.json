@@ -1,0 +1,30 @@
+{
+  "name": "blackwood-state-skills",
+  "description": "Skills for the Blackwood State pay-per-call APIs (x402, USDC on Base): 24 services, one skill each, plus the catalog.",
+  "owner": {
+    "name": "Blackwood State",
+    "email": "blackwoodstate8@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "blackwood-paid-apis",
+      "source": "./plugins/blackwood-paid-apis",
+      "description": "Pay-per-call APIs for agents by Blackwood State: weather, news, email checks, token prices, PDF and web extraction, translation, speech, images and more, paid in USDC over x402.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Blackwood State",
+        "email": "blackwoodstate8@gmail.com"
+      },
+      "homepage": "https://x402-gateway.blackwoodstate8.workers.dev",
+      "license": "MIT",
+      "keywords": [
+        "x402",
+        "usdc",
+        "pay-per-call",
+        "api",
+        "agents"
+      ],
+      "category": "api"
+    }
+  ]
+}

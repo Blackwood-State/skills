@@ -1,6 +1,6 @@
 ---
 name: blackwood-speech-synthesize
-description: Use this when you need text to speech, a voice audio file or narration of a short text. Returns JSON with your text read aloud as WAV audio (base64, 44.1 kHz mono) by MeloTTS on Workers AI, in English, Spanish, French, Chinese, Japanese or Korean for 0.023 USDC per call. Do not use for voice cloning, a chosen voice, SSML or audio longer than about two minutes. Typical response time 8000 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need text to speech, a voice audio file or narration of a short text. Returns JSON with your text read aloud as WAV audio (base64, 44.1 kHz mono) by MeloTTS on Workers AI, in English, Spanish, French, Chinese, Japanese or Korean for 0.023 USDC per call. Do not use for voice cloning, a chosen voice, SSML or audio longer than about two minutes. Typical response time 8000 ms (p95). Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: text-to-speech
@@ -11,7 +11,7 @@ metadata:
 
 # Text to speech
 
-Use this when you need text to speech, a voice audio file or narration of a short text. Returns JSON with your text read aloud as WAV audio (base64, 44.1 kHz mono) by MeloTTS on Workers AI, in English, Spanish, French, Chinese, Japanese or Korean for 0.023 USDC per call. Do not use for voice cloning, a chosen voice, SSML or audio longer than about two minutes. Typical response time 8000 ms (p95).
+Use this when you need text to speech, a voice audio file or narration of a short text. Returns JSON with your text read aloud as WAV audio (base64, 44.1 kHz mono) by MeloTTS on Workers AI, in English, Spanish, French, Chinese, Japanese or Korean for 0.023 USDC per call. Do not use for voice cloning, a chosen voice, SSML or audio longer than about two minutes. Typical response time 8000 ms (p95). Category: Media.
 
 **Price:** 0.023 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

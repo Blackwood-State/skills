@@ -1,6 +1,6 @@
 ---
 name: blackwood-image-generate
-description: Use this when you need image generation or text to image from a prompt for illustrations or mockups. Returns JSON with a 1024x1024 JPEG generated from a text prompt by FLUX.1 schnell on Workers AI, as base64 for 0.03 USDC per call. Do not use for image edits, specific sizes, photos of real people or more than one image per call. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need image generation or text to image from a prompt for illustrations or mockups. Returns JSON with a 1024x1024 JPEG generated from a text prompt by FLUX.1 schnell on Workers AI, as base64 for 0.03 USDC per call. Do not use for image edits, specific sizes, photos of real people or more than one image per call. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: image-gen
@@ -11,7 +11,7 @@ metadata:
 
 # Text to image
 
-Use this when you need image generation or text to image from a prompt for illustrations or mockups. Returns JSON with a 1024x1024 JPEG generated from a text prompt by FLUX.1 schnell on Workers AI, as base64 for 0.03 USDC per call. Do not use for image edits, specific sizes, photos of real people or more than one image per call. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer.
+Use this when you need image generation or text to image from a prompt for illustrations or mockups. Returns JSON with a 1024x1024 JPEG generated from a text prompt by FLUX.1 schnell on Workers AI, as base64 for 0.03 USDC per call. Do not use for image edits, specific sizes, photos of real people or more than one image per call. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Media.
 
 **Price:** 0.03 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

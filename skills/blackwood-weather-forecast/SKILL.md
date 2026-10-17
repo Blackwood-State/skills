@@ -1,6 +1,6 @@
 ---
 name: blackwood-weather-forecast
-description: Use this when you need a weather forecast, temperature or precipitation for the next hours or days at a place given by coordinates. Returns JSON with the hourly weather forecast for a latitude and longitude: temperature, precipitation, wind, humidity, cloud cover and a weather symbol, from MET Norway for 0.003 USDC per call. Do not use for historical weather, severe weather alerts or places given only by name (geocode first). Typical response time 1500 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need a weather forecast, temperature or precipitation for the next hours or days at a place given by coordinates. Returns JSON with the hourly weather forecast for a latitude and longitude: temperature, precipitation, wind, humidity, cloud cover and a weather symbol, from MET Norway for 0.003 USDC per call. Do not use for historical weather, severe weather alerts or places given only by name (geocode first). Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: weather-forecast
@@ -11,7 +11,7 @@ metadata:
 
 # Weather forecast
 
-Use this when you need a weather forecast, temperature or precipitation for the next hours or days at a place given by coordinates. Returns JSON with the hourly weather forecast for a latitude and longitude: temperature, precipitation, wind, humidity, cloud cover and a weather symbol, from MET Norway for 0.003 USDC per call. Do not use for historical weather, severe weather alerts or places given only by name (geocode first). Typical response time 1500 ms (p95).
+Use this when you need a weather forecast, temperature or precipitation for the next hours or days at a place given by coordinates. Returns JSON with the hourly weather forecast for a latitude and longitude: temperature, precipitation, wind, humidity, cloud cover and a weather symbol, from MET Norway for 0.003 USDC per call. Do not use for historical weather, severe weather alerts or places given only by name (geocode first). Typical response time 1500 ms (p95). Category: Data.
 
 **Price:** 0.003 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

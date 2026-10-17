@@ -1,6 +1,6 @@
 ---
 name: blackwood-sec-facts
-description: Use this when you need sec filings company financials, earnings or fundamentals for a stock ticker for the last two fiscal years. Returns JSON with a US-listed company's annual revenue, net and operating income, diluted EPS, operating cash flow and year-end balance sheet from SEC filings for 0.02 USDC per call. Do not use for quarterly numbers, real-time prices, non-US companies or filings older than two years. Typical response time 300 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need sec filings company financials, earnings or fundamentals for a stock ticker for the last two fiscal years. Returns JSON with a US-listed company's annual revenue, net and operating income, diluted EPS, operating cash flow and year-end balance sheet from SEC filings for 0.02 USDC per call. Do not use for quarterly numbers, real-time prices, non-US companies or filings older than two years. Typical response time 300 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: sec-facts
@@ -11,7 +11,7 @@ metadata:
 
 # SEC company financials
 
-Use this when you need sec filings company financials, earnings or fundamentals for a stock ticker for the last two fiscal years. Returns JSON with a US-listed company's annual revenue, net and operating income, diluted EPS, operating cash flow and year-end balance sheet from SEC filings for 0.02 USDC per call. Do not use for quarterly numbers, real-time prices, non-US companies or filings older than two years. Typical response time 300 ms (p95).
+Use this when you need sec filings company financials, earnings or fundamentals for a stock ticker for the last two fiscal years. Returns JSON with a US-listed company's annual revenue, net and operating income, diluted EPS, operating cash flow and year-end balance sheet from SEC filings for 0.02 USDC per call. Do not use for quarterly numbers, real-time prices, non-US companies or filings older than two years. Typical response time 300 ms (p95). Category: Data.
 
 **Price:** 0.02 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

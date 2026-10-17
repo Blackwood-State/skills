@@ -1,6 +1,6 @@
 ---
 name: blackwood-pdf-extract
-description: Use this when you need to extract text from a pdf for document parsing, search or an LLM. Returns JSON with the text of each page of a PDF (first 20 pages) plus title, author and producer metadata for 0.01 USDC per page, up to 0.2 USDC per call (clients without upto pay the cap). Do not use for scanned PDFs (no OCR), password-protected files or files over 15 MB. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need to extract text from a pdf for document parsing, search or an LLM. Returns JSON with the text of each page of a PDF (first 20 pages) plus title, author and producer metadata for 0.01 USDC per page, up to 0.2 USDC per call (clients without upto pay the cap). Do not use for scanned PDFs (no OCR), password-protected files or files over 15 MB. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: pdf-text
@@ -11,7 +11,7 @@ metadata:
 
 # PDF to text
 
-Use this when you need to extract text from a pdf for document parsing, search or an LLM. Returns JSON with the text of each page of a PDF (first 20 pages) plus title, author and producer metadata for 0.01 USDC per page, up to 0.2 USDC per call (clients without upto pay the cap). Do not use for scanned PDFs (no OCR), password-protected files or files over 15 MB. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer.
+Use this when you need to extract text from a pdf for document parsing, search or an LLM. Returns JSON with the text of each page of a PDF (first 20 pages) plus title, author and producer metadata for 0.01 USDC per page, up to 0.2 USDC per call (clients without upto pay the cap). Do not use for scanned PDFs (no OCR), password-protected files or files over 15 MB. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Data.
 
 **Price:** 0.01 USDC per page, at most 0.2 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

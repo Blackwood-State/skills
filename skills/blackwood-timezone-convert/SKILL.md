@@ -1,6 +1,6 @@
 ---
 name: blackwood-timezone-convert
-description: Use this when you need timezone conversion between time zones, the current time in a zone or a utc offset with daylight saving. Returns JSON converting a date and time between IANA time zones with daylight saving rules, with UTC offsets, abbreviations and the current time in each zone, from the IANA tz database for 0.003 USDC per call. Do not use for places given only by city or address without an IANA zone name, or dates before 1970. Typical response time 500 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need timezone conversion between time zones, the current time in a zone or a utc offset with daylight saving. Returns JSON converting a date and time between IANA time zones with daylight saving rules, with UTC offsets, abbreviations and the current time in each zone, from the IANA tz database for 0.003 USDC per call. Do not use for places given only by city or address without an IANA zone name, or dates before 1970. Typical response time 500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: timezone
@@ -11,7 +11,7 @@ metadata:
 
 # Time zones
 
-Use this when you need timezone conversion between time zones, the current time in a zone or a utc offset with daylight saving. Returns JSON converting a date and time between IANA time zones with daylight saving rules, with UTC offsets, abbreviations and the current time in each zone, from the IANA tz database for 0.003 USDC per call. Do not use for places given only by city or address without an IANA zone name, or dates before 1970. Typical response time 500 ms (p95).
+Use this when you need timezone conversion between time zones, the current time in a zone or a utc offset with daylight saving. Returns JSON converting a date and time between IANA time zones with daylight saving rules, with UTC offsets, abbreviations and the current time in each zone, from the IANA tz database for 0.003 USDC per call. Do not use for places given only by city or address without an IANA zone name, or dates before 1970. Typical response time 500 ms (p95). Category: Data.
 
 **Price:** 0.003 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

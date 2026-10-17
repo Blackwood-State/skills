@@ -1,6 +1,6 @@
 ---
 name: blackwood-airport-delays
-description: Use this when you need airport delays or flight status context for a US airport, such as ground stops or departure delays right now. Returns JSON with current US airport delays from the FAA: ground stops, ground delay programs with average and maximum delay, arrival and departure delays and closures, for all airports or one for 0.007 USDC per call. Do not use for the status of a flight number, airports outside the US or historical delays. Typical response time 1500 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need airport delays or flight status context for a US airport, such as ground stops or departure delays right now. Returns JSON with current US airport delays from the FAA: ground stops, ground delay programs with average and maximum delay, arrival and departure delays and closures, for all airports or one for 0.007 USDC per call. Do not use for the status of a flight number, airports outside the US or historical delays. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: airport-delays
@@ -11,7 +11,7 @@ metadata:
 
 # Airport delays
 
-Use this when you need airport delays or flight status context for a US airport, such as ground stops or departure delays right now. Returns JSON with current US airport delays from the FAA: ground stops, ground delay programs with average and maximum delay, arrival and departure delays and closures, for all airports or one for 0.007 USDC per call. Do not use for the status of a flight number, airports outside the US or historical delays. Typical response time 1500 ms (p95).
+Use this when you need airport delays or flight status context for a US airport, such as ground stops or departure delays right now. Returns JSON with current US airport delays from the FAA: ground stops, ground delay programs with average and maximum delay, arrival and departure delays and closures, for all airports or one for 0.007 USDC per call. Do not use for the status of a flight number, airports outside the US or historical delays. Typical response time 1500 ms (p95). Category: Data.
 
 **Price:** 0.007 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

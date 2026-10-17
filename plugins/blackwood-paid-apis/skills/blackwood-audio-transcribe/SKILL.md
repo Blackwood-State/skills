@@ -1,6 +1,6 @@
 ---
 name: blackwood-audio-transcribe
-description: Use this when you need speech to text transcription or translation of an audio file at a public URL. Returns JSON with a Whisper transcription of an audio file: text, timed segments and language, or an English translation for 0.008 USDC per megabyte, up to 0.08 USDC per call (clients without upto pay the cap). Do not use for audio over 10 MB or speaker labels. Result in the same call (about 20000 ms); a status tool polls for free if it takes longer. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need speech to text transcription or translation of an audio file at a public URL. Returns JSON with a Whisper transcription of an audio file: text, timed segments and language, or an English translation for 0.008 USDC per megabyte, up to 0.08 USDC per call (clients without upto pay the cap). Do not use for audio over 10 MB or speaker labels. Result in the same call (about 20000 ms); a status tool polls for free if it takes longer. Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: speech-to-text
@@ -11,7 +11,7 @@ metadata:
 
 # Speech to text
 
-Use this when you need speech to text transcription or translation of an audio file at a public URL. Returns JSON with a Whisper transcription of an audio file: text, timed segments and language, or an English translation for 0.008 USDC per megabyte, up to 0.08 USDC per call (clients without upto pay the cap). Do not use for audio over 10 MB or speaker labels. Result in the same call (about 20000 ms); a status tool polls for free if it takes longer.
+Use this when you need speech to text transcription or translation of an audio file at a public URL. Returns JSON with a Whisper transcription of an audio file: text, timed segments and language, or an English translation for 0.008 USDC per megabyte, up to 0.08 USDC per call (clients without upto pay the cap). Do not use for audio over 10 MB or speaker labels. Result in the same call (about 20000 ms); a status tool polls for free if it takes longer. Category: Media.
 
 **Price:** 0.008 USDC per megabyte, at most 0.08 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

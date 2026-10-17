@@ -1,6 +1,6 @@
 ---
 name: blackwood-random-generate
-description: Use this when you need a random number generator, dice rolls, a coin flip, a uuid or random bytes that no one can predict. Returns JSON with cryptographically secure random values: integers in a range, dice rolls, coin flips, UUIDs or hex bytes, from the Workers Web Crypto CSPRNG for 0.005 USDC per call. Do not use for verifiable on-chain randomness (VRF) or reproducible seeded sequences. Typical response time 500 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need a random number generator, dice rolls, a coin flip, a uuid or random bytes that no one can predict. Returns JSON with cryptographically secure random values: integers in a range, dice rolls, coin flips, UUIDs or hex bytes, from the Workers Web Crypto CSPRNG for 0.005 USDC per call. Do not use for verifiable on-chain randomness (VRF) or reproducible seeded sequences. Typical response time 500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: random
@@ -11,7 +11,7 @@ metadata:
 
 # Random numbers
 
-Use this when you need a random number generator, dice rolls, a coin flip, a uuid or random bytes that no one can predict. Returns JSON with cryptographically secure random values: integers in a range, dice rolls, coin flips, UUIDs or hex bytes, from the Workers Web Crypto CSPRNG for 0.005 USDC per call. Do not use for verifiable on-chain randomness (VRF) or reproducible seeded sequences. Typical response time 500 ms (p95).
+Use this when you need a random number generator, dice rolls, a coin flip, a uuid or random bytes that no one can predict. Returns JSON with cryptographically secure random values: integers in a range, dice rolls, coin flips, UUIDs or hex bytes, from the Workers Web Crypto CSPRNG for 0.005 USDC per call. Do not use for verifiable on-chain randomness (VRF) or reproducible seeded sequences. Typical response time 500 ms (p95). Category: Infrastructure.
 
 **Price:** 0.005 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

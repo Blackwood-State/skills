@@ -1,6 +1,6 @@
 ---
 name: blackwood-x402-check
-description: Use this when you need an x402 endpoint test or validation of a paid API before integrating or listing it. Returns JSON checking an x402 endpoint without paying: whether it answers 402, the parsed payment options (scheme, network, asset, amount, payTo), Bazaar discovery metadata and problems found for 0.007 USDC per call. Do not use for actually paying the endpoint, or endpoints behind authentication. Typical response time 2500 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need an x402 endpoint test or validation of a paid API before integrating or listing it. Returns JSON checking an x402 endpoint without paying: whether it answers 402, the parsed payment options (scheme, network, asset, amount, payTo), Bazaar discovery metadata and problems found for 0.007 USDC per call. Do not use for actually paying the endpoint, or endpoints behind authentication. Typical response time 2500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: x402-check
@@ -11,7 +11,7 @@ metadata:
 
 # x402 check
 
-Use this when you need an x402 endpoint test or validation of a paid API before integrating or listing it. Returns JSON checking an x402 endpoint without paying: whether it answers 402, the parsed payment options (scheme, network, asset, amount, payTo), Bazaar discovery metadata and problems found for 0.007 USDC per call. Do not use for actually paying the endpoint, or endpoints behind authentication. Typical response time 2500 ms (p95).
+Use this when you need an x402 endpoint test or validation of a paid API before integrating or listing it. Returns JSON checking an x402 endpoint without paying: whether it answers 402, the parsed payment options (scheme, network, asset, amount, payTo), Bazaar discovery metadata and problems found for 0.007 USDC per call. Do not use for actually paying the endpoint, or endpoints behind authentication. Typical response time 2500 ms (p95). Category: Infrastructure.
 
 **Price:** 0.007 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

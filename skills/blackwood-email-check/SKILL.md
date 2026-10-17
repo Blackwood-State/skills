@@ -1,6 +1,6 @@
 ---
 name: blackwood-email-check
-description: Use this when you need email validation or to verify email addresses (domain, MX records) before sending, signup or lead scoring. Returns JSON with an email address check: syntax, domain and MX records, disposable, free and role account flags, SPF and DMARC, and a verdict on whether the domain can receive mail for 0.005 USDC per call. Do not use for confirming that the mailbox itself exists (no SMTP probe is done) or sending email. Typical response time 800 ms (p95). Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: Use this when you need email validation or to verify email addresses (domain, MX records) before sending, signup or lead scoring. Returns JSON with an email address check: syntax, domain and MX records, disposable, free and role account flags, SPF and DMARC, and a verdict on whether the domain can receive mail for 0.005 USDC per call. Do not use for confirming that the mailbox itself exists (no SMTP probe is done) or sending email. Typical response time 800 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
 license: MIT
 metadata:
   service: email-check
@@ -11,7 +11,7 @@ metadata:
 
 # Email address check
 
-Use this when you need email validation or to verify email addresses (domain, MX records) before sending, signup or lead scoring. Returns JSON with an email address check: syntax, domain and MX records, disposable, free and role account flags, SPF and DMARC, and a verdict on whether the domain can receive mail for 0.005 USDC per call. Do not use for confirming that the mailbox itself exists (no SMTP probe is done) or sending email. Typical response time 800 ms (p95).
+Use this when you need email validation or to verify email addresses (domain, MX records) before sending, signup or lead scoring. Returns JSON with an email address check: syntax, domain and MX records, disposable, free and role account flags, SPF and DMARC, and a verdict on whether the domain can receive mail for 0.005 USDC per call. Do not use for confirming that the mailbox itself exists (no SMTP probe is done) or sending email. Typical response time 800 ms (p95). Category: Data.
 
 **Price:** 0.005 USDC per call, paid in USDC on Base mainnet over x402. Failed calls and buyer errors (HTTP 400) are not charged.
 

@@ -1,6 +1,6 @@
 {
   "name": "blackwood-state-skills",
-  "description": "Skills for the Blackwood State pay-per-call APIs (x402, USDC on Base): 32 services, one skill each, plus the catalog.",
+  "description": "Skills for the Blackwood State pay-per-call APIs (x402, USDC on Base): 33 services, one skill each, plus the catalog.",
   "owner": {
     "name": "Blackwood State",
     "email": "blackwoodstate8@gmail.com"

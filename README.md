@@ -1,6 +1,6 @@
 # Blackwood State skills
 
-Skills for 32 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
+Skills for 33 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
 
 - Install everything: `npx skills add Blackwood-State/skills` (or from the gateway: `npx skills add https://x402-gateway.blackwoodstate8.workers.dev`)
 - Claude Code: `claude plugin marketplace add Blackwood-State/skills` then `claude plugin install blackwood-paid-apis@blackwood-state-skills`
@@ -41,5 +41,6 @@ Skills for 32 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](
 | [blackwood-news-briefing](skills/blackwood-news-briefing/SKILL.md) | you need a news briefing, a research summary of recent coverage or an analysis of what the press says about a topic or company | 0.04 USDC |
 | [blackwood-company-dossier](skills/blackwood-company-dossier/SKILL.md) | you need company research, due diligence or a quick analysis of a business from its website domain and optional ticker | 0.03 USDC |
 | [blackwood-wallet-value](skills/blackwood-wallet-value/SKILL.md) | you need a wallet portfolio value in USD, a wallet net worth or token balances with USD value for a 0x address | 0.005 USDC |
+| [blackwood-altcoin-discovery](skills/blackwood-altcoin-discovery/SKILL.md) | you need altcoin discovery, new token listings or fresh Base tokens with real liquidity to research | 0.005 USDC |
 
 License: MIT. Contact: blackwoodstate8@gmail.com.

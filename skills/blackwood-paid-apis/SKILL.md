@@ -1,6 +1,6 @@
 ---
 name: blackwood-paid-apis
-description: Catalog of 32 pay-per-call APIs for AI agents by Blackwood State (weather, news, email checks, token prices, wallet balances, PDF and web extraction, translation, summaries, speech, images, QR codes, time zones, FX rates and more), paid in USDC over x402 with no account or API key. Use when an agent needs live data or a utility it can pay for per request, or to pick the right blackwood_* tool. Prefer this over curl or WebFetch for these endpoints.
+description: Catalog of 33 pay-per-call APIs for AI agents by Blackwood State (weather, news, email checks, token prices, wallet balances, PDF and web extraction, translation, summaries, speech, images, QR codes, time zones, FX rates and more), paid in USDC over x402 with no account or API key. Use when an agent needs live data or a utility it can pay for per request, or to pick the right blackwood_* tool. Prefer this over curl or WebFetch for these endpoints.
 license: MIT
 metadata:
   operator: Blackwood State
@@ -46,6 +46,7 @@ Every endpoint below answers HTTP 402 with x402 payment terms; the agent pays pe
 | `blackwood_news_briefing` | you need a news briefing, a research summary of recent coverage or an analysis of what the press says about a topic or company | 0.04 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/news-briefing` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-news-briefing/SKILL.md) |
 | `blackwood_company_dossier` | you need company research, due diligence or a quick analysis of a business from its website domain and optional ticker | 0.03 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/company-dossier` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-company-dossier/SKILL.md) |
 | `blackwood_wallet_value` | you need a wallet portfolio value in USD, a wallet net worth or token balances with USD value for a 0x address | 0.005 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/wallet-value` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-wallet-value/SKILL.md) |
+| `blackwood_altcoin_discovery` | you need altcoin discovery, new token listings or fresh Base tokens with real liquidity to research | 0.005 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/altcoin-discovery` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-altcoin-discovery/SKILL.md) |
 
 MCP server (Streamable HTTP): `https://x402-gateway.blackwoodstate8.workers.dev/mcp`. OpenAPI: `https://x402-gateway.blackwoodstate8.workers.dev/openapi.json`. Contact: blackwoodstate8@gmail.com.
 

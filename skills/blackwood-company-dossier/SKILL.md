@@ -1,10 +1,10 @@
 ---
 name: blackwood-company-dossier
-description: Use when you need company research, due diligence or a quick analysis of a business from its website domain and optional ticker. Do not use for private financials, credit scores, people search or businesses without a website. Returns JSON with a company research dossier in one call: domain registration and DNS, email and website security, latest news and, with a ticker, SEC financials, priced below the separate calls for 0.03 USDC per call. Typical response time 8000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need company research, due diligence or a quick analysis of a business from its website domain and optional ticker. Do not use for private financials, credit scores, people search or businesses without a website. Returns JSON with a company research dossier in one call: domain registration and DNS, email and website security, latest news and, with a ticker, SEC financials, priced below the separate calls for 0.03 USDC per call. Typical response time 8000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: company-dossier
-  price: 0.03 USDC per call
+  price: "0.03 USDC per call"
   network: eip155:8453
   mcp: blackwood_company_dossier
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

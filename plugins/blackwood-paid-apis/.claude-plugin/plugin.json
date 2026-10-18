@@ -1,7 +1,7 @@
 {
   "name": "blackwood-paid-apis",
   "displayName": "Blackwood State paid APIs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Skills for 33 pay-per-call APIs by Blackwood State, paid in USDC over x402, and their MCP tools for prepaid-credit keys.",
   "author": {
     "name": "Blackwood State",

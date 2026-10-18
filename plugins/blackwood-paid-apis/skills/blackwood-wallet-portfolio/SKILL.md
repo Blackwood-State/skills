@@ -1,10 +1,10 @@
 ---
 name: blackwood-wallet-portfolio
-description: Use when you need a multi-chain wallet balance, a wallet portfolio or wallet transaction history on Ethereum, Base or Solana. Do not use for uSD values, NFTs, DeFi positions, long-tail tokens or chains beyond Ethereum, Base and Solana. Returns JSON with a multi-chain wallet balance and transaction history: native and major-token balances on Ethereum, Base or Solana plus the latest transfers, without airdrop spam for 0.005 USDC per call. Typical response time 3000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a multi-chain wallet balance, a wallet portfolio or wallet transaction history on Ethereum, Base or Solana. Do not use for uSD values, NFTs, DeFi positions, long-tail tokens or chains beyond Ethereum, Base and Solana. Returns JSON with a multi-chain wallet balance and transaction history: native and major-token balances on Ethereum, Base or Solana plus the latest transfers, without airdrop spam for 0.005 USDC per call. Typical response time 3000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: wallet-portfolio
-  price: 0.005 USDC per call
+  price: "0.005 USDC per call"
   network: eip155:8453
   mcp: blackwood_wallet_portfolio
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

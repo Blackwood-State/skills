@@ -1,10 +1,10 @@
 ---
 name: blackwood-x402-check
-description: Use when you need an x402 endpoint check or x402 endpoint test, or to validate x402 endpoint listings before paying or integrating. Do not use for actually paying the endpoint, or endpoints behind authentication. Returns JSON with an x402 check of an endpoint without paying: whether it answers 402, its payment options (scheme, network, asset, amount, payTo), Bazaar metadata and problems found for 0.007 USDC per call. Typical response time 2500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need an x402 endpoint check or x402 endpoint test, or to validate x402 endpoint listings before paying or integrating. Do not use for actually paying the endpoint, or endpoints behind authentication. Returns JSON with an x402 check of an endpoint without paying: whether it answers 402, its payment options (scheme, network, asset, amount, payTo), Bazaar metadata and problems found for 0.007 USDC per call. Typical response time 2500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: x402-check
-  price: 0.007 USDC per call
+  price: "0.007 USDC per call"
   network: eip155:8453
   mcp: blackwood_x402_check
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

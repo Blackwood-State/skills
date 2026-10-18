@@ -1,10 +1,10 @@
 ---
 name: blackwood-speech-synthesize
-description: Use when you need text to speech, tts, a voice audio file or spoken narration of a short text. Do not use for voice cloning, a chosen voice, SSML or audio longer than about two minutes. Returns JSON with text to speech (TTS): your text read aloud as WAV voice audio (base64, 44.1 kHz mono) by MeloTTS on Workers AI, in English, Spanish, French, Chinese, Japanese or Korean for 0.023 USDC per call. Typical response time 8000 ms (p95). Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need text to speech, tts, a voice audio file or spoken narration of a short text. Do not use for voice cloning, a chosen voice, SSML or audio longer than about two minutes. Returns JSON with text to speech (TTS): your text read aloud as WAV voice audio (base64, 44.1 kHz mono) by MeloTTS on Workers AI, in English, Spanish, French, Chinese, Japanese or Korean for 0.023 USDC per call. Typical response time 8000 ms (p95). Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: text-to-speech
-  price: 0.023 USDC per call
+  price: "0.023 USDC per call"
   network: eip155:8453
   mcp: blackwood_speech_synthesize
 ---
@@ -32,6 +32,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

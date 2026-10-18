@@ -1,10 +1,10 @@
 ---
 name: blackwood-audio-transcribe
-description: Use when you need speech to text transcription or translation of an audio file at a public URL. Do not use for audio over 10 MB or speaker labels. Returns JSON with a Whisper transcription of an audio file: text, timed segments and language, or an English translation for 0.005 USDC per megabyte, up to 0.05 USDC per call (clients without upto pay the cap). Result in the same call (about 20000 ms); a status tool polls for free if it takes longer. Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need speech to text transcription or translation of an audio file at a public URL. Do not use for audio over 10 MB or speaker labels. Returns JSON with a Whisper transcription of an audio file: text, timed segments and language, or an English translation for 0.005 USDC per megabyte, up to 0.05 USDC per call (clients without upto pay the cap). Result in the same call (about 20000 ms); a status tool polls for free if it takes longer. Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: speech-to-text
-  price: 0.005 USDC per megabyte, at most 0.05 USDC per call
+  price: "0.005 USDC per megabyte, at most 0.05 USDC per call"
   network: eip155:8453
   mcp: blackwood_audio_transcribe
 ---
@@ -35,6 +35,8 @@ The HTTP call returns `{ jobId, pollUrl }`; poll `pollUrl` (free, no payment) un
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

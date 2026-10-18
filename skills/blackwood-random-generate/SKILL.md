@@ -1,10 +1,10 @@
 ---
 name: blackwood-random-generate
-description: Use when you need a random number generator, dice rolls, a coin flip, a uuid or random bytes that no one can predict. Do not use for verifiable on-chain randomness (VRF) or reproducible seeded sequences. Returns JSON with cryptographically secure random values: integers in a range, dice rolls, coin flips, UUIDs or hex bytes, from the Workers Web Crypto CSPRNG for 0.005 USDC per call. Typical response time 500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a random number generator, dice rolls, a coin flip, a uuid or random bytes that no one can predict. Do not use for verifiable on-chain randomness (VRF) or reproducible seeded sequences. Returns JSON with cryptographically secure random values: integers in a range, dice rolls, coin flips, UUIDs or hex bytes, from the Workers Web Crypto CSPRNG for 0.005 USDC per call. Typical response time 500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: random
-  price: 0.005 USDC per call
+  price: "0.005 USDC per call"
   network: eip155:8453
   mcp: blackwood_random_generate
 ---
@@ -36,6 +36,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

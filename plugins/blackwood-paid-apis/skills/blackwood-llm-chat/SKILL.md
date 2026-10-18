@@ -1,10 +1,10 @@
 ---
 name: blackwood-llm-chat
-description: Use when you need an llm chat completion for summaries, extraction or classification from a cheap open model. Do not use for frontier models, tool calling or streaming. Returns JSON with a chat completion from IBM Granite 4.0 Micro on Workers AI, with token usage for 0.002 USDC per thousand tokens, up to 0.03 USDC per call (clients without upto pay the cap). Result in the same call (about 8000 ms); a status tool polls for free if it takes longer. Category: Inference. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need an llm chat completion for summaries, extraction or classification from a cheap open model. Do not use for frontier models, tool calling or streaming. Returns JSON with a chat completion from IBM Granite 4.0 Micro on Workers AI, with token usage for 0.002 USDC per thousand tokens, up to 0.03 USDC per call (clients without upto pay the cap). Result in the same call (about 8000 ms); a status tool polls for free if it takes longer. Category: Inference. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: llm-chat
-  price: 0.002 USDC per thousand tokens, at most 0.03 USDC per call
+  price: "0.002 USDC per thousand tokens, at most 0.03 USDC per call"
   network: eip155:8453
   mcp: blackwood_llm_chat
 ---
@@ -35,6 +35,8 @@ The HTTP call returns `{ jobId, pollUrl }`; poll `pollUrl` (free, no payment) un
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

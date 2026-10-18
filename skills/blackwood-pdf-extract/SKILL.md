@@ -1,10 +1,10 @@
 ---
 name: blackwood-pdf-extract
-description: Use when you need to extract text from a pdf, pdf to text or document parsing for an LLM. Do not use for scanned PDFs (no OCR), password-protected files or files over 15 MB. Returns JSON with PDF text extraction: the text of each page (first 20 pages) plus title, author and producer metadata for 0.0025 USDC per page, up to 0.05 USDC per call (clients without upto pay the cap). Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need to extract text from a pdf, pdf to text or document parsing for an LLM. Do not use for scanned PDFs (no OCR), password-protected files or files over 15 MB. Returns JSON with PDF text extraction: the text of each page (first 20 pages) plus title, author and producer metadata for 0.0025 USDC per page, up to 0.05 USDC per call (clients without upto pay the cap). Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: pdf-text
-  price: 0.0025 USDC per page, at most 0.05 USDC per call
+  price: "0.0025 USDC per page, at most 0.05 USDC per call"
   network: eip155:8453
   mcp: blackwood_pdf_extract
 ---
@@ -33,6 +33,8 @@ The HTTP call returns `{ jobId, pollUrl }`; poll `pollUrl` (free, no payment) un
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

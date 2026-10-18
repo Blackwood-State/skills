@@ -1,10 +1,10 @@
 ---
 name: blackwood-domain-intel
-description: Use when you need a domain lookup, whois, dns records or certificate transparency data for osint, security or due diligence. Do not use for historical whois, registrant personal data (redacted by registries) or port and vulnerability scans. Returns JSON with domain intelligence: WHOIS/RDAP registration, DNS records (A, AAAA, MX, NS, TXT, CAA), SPF and DMARC, and TLS certificates from certificate transparency logs for 0.02 USDC per call. Typical response time 4000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a domain lookup, whois, dns records or certificate transparency data for osint, security or due diligence. Do not use for historical whois, registrant personal data (redacted by registries) or port and vulnerability scans. Returns JSON with domain intelligence: WHOIS/RDAP registration, DNS records (A, AAAA, MX, NS, TXT, CAA), SPF and DMARC, and TLS certificates from certificate transparency logs for 0.02 USDC per call. Typical response time 4000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: domain-intel
-  price: 0.02 USDC per call
+  price: "0.02 USDC per call"
   network: eip155:8453
   mcp: blackwood_domain_intel
 ---
@@ -32,6 +32,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

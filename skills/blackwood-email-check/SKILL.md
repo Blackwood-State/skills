@@ -1,10 +1,10 @@
 ---
 name: blackwood-email-check
-description: Use when you need email validation, to verify email addresses or validate email syntax and MX records before sending or signup. Do not use for confirming that the mailbox itself exists (no SMTP probe is done) or sending email. Returns JSON with email verification of one address: syntax, domain MX records, disposable, free and role-account flags, SPF and DMARC, and a verdict on whether the domain can receive mail for 0.005 USDC per call. Typical response time 800 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need email validation, to verify email addresses or validate email syntax and MX records before sending or signup. Do not use for confirming that the mailbox itself exists (no SMTP probe is done) or sending email. Returns JSON with email verification of one address: syntax, domain MX records, disposable, free and role-account flags, SPF and DMARC, and a verdict on whether the domain can receive mail for 0.005 USDC per call. Typical response time 800 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: email-check
-  price: 0.005 USDC per call
+  price: "0.005 USDC per call"
   network: eip155:8453
   mcp: blackwood_email_check
 ---
@@ -31,6 +31,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

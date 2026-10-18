@@ -1,10 +1,10 @@
 ---
 name: blackwood-fx-history
-description: Use when you need historical exchange rates, a historical FX rate series, forex history or a currency trend. Do not use for rates older than 90 days, live quotes or crypto (one ECB rate per business day). Returns JSON with historical exchange rates: 90 days of daily ECB euro reference rates (free at ecb.europa.eu) for up to 10 currencies, rebased to any base as cross rates, with min, max and percent change for 0.005 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need historical exchange rates, a historical FX rate series, forex history or a currency trend. Do not use for rates older than 90 days, live quotes or crypto (one ECB rate per business day). Returns JSON with historical exchange rates: 90 days of daily ECB euro reference rates (free at ecb.europa.eu) for up to 10 currencies, rebased to any base as cross rates, with min, max and percent change for 0.005 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: fx-history
-  price: 0.005 USDC per call
+  price: "0.005 USDC per call"
   network: eip155:8453
   mcp: blackwood_fx_history
 ---
@@ -35,6 +35,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

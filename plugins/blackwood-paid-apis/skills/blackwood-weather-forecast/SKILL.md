@@ -1,10 +1,10 @@
 ---
 name: blackwood-weather-forecast
-description: Use when you need a weather forecast, the current weather, temperature, rain or wind for the next hours or days at given coordinates. Do not use for historical weather, severe weather alerts or places given only by name (geocode first). Returns JSON with the weather forecast for a latitude and longitude: hourly temperature, rain and precipitation, wind, humidity and cloud cover for the next days, from MET Norway for 0.003 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a weather forecast, the current weather, temperature, rain or wind for the next hours or days at given coordinates. Do not use for historical weather, severe weather alerts or places given only by name (geocode first). Returns JSON with the weather forecast for a latitude and longitude: hourly temperature, rain and precipitation, wind, humidity and cloud cover for the next days, from MET Norway for 0.003 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: weather-forecast
-  price: 0.003 USDC per call
+  price: "0.003 USDC per call"
   network: eip155:8453
   mcp: blackwood_weather_forecast
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

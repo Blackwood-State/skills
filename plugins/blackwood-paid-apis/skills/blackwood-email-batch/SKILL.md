@@ -1,10 +1,10 @@
 ---
 name: blackwood-email-batch
-description: Use when you need bulk email validation, email list verification or to verify email lists before a send or import. Do not use for one address (email-check is cheaper), proving a mailbox exists (no SMTP probe) or sending email. Returns JSON checking up to 20 email addresses in one call: syntax, MX records, disposable, free and role flags, SPF, DMARC and a verdict each, plus counts by verdict for 0.02 USDC per call. Typical response time 2500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need bulk email validation, email list verification or to verify email lists before a send or import. Do not use for one address (email-check is cheaper), proving a mailbox exists (no SMTP probe) or sending email. Returns JSON checking up to 20 email addresses in one call: syntax, MX records, disposable, free and role flags, SPF, DMARC and a verdict each, plus counts by verdict for 0.02 USDC per call. Typical response time 2500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: email-batch
-  price: 0.02 USDC per call
+  price: "0.02 USDC per call"
   network: eip155:8453
   mcp: blackwood_email_batch
 ---
@@ -31,6 +31,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

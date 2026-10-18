@@ -1,10 +1,10 @@
 ---
 name: blackwood-gas-fees
-description: Use when you need the current gas price, an ethereum gas fee estimate before a transaction, or to compare gas fees across chains. Do not use for gas units of a given transaction, gas history or chains beyond Ethereum, Base and Solana. Returns JSON with the gas price and gas fees on Ethereum and Base (base fee, slow, standard and fast EIP-1559 fees in gwei, transfer cost) plus Solana priority fees for 0.003 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need the current gas price, an ethereum gas fee estimate before a transaction, or to compare gas fees across chains. Do not use for gas units of a given transaction, gas history or chains beyond Ethereum, Base and Solana. Returns JSON with the gas price and gas fees on Ethereum and Base (base fee, slow, standard and fast EIP-1559 fees in gwei, transfer cost) plus Solana priority fees for 0.003 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: gas-fees
-  price: 0.003 USDC per call
+  price: "0.003 USDC per call"
   network: eip155:8453
   mcp: blackwood_gas_fees
 ---
@@ -31,6 +31,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

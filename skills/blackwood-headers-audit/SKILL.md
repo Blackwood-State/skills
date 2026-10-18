@@ -1,10 +1,10 @@
 ---
 name: blackwood-headers-audit
-description: Use when you need an http security headers audit of a website or URL, with a grade and what to fix. Do not use for vulnerability scans, TLS cipher analysis or pages behind a login. Returns JSON auditing the HTTP security headers of a public URL (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, cookies) with a grade and fixes for 0.007 USDC per call. Typical response time 2500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need an http security headers audit of a website or URL, with a grade and what to fix. Do not use for vulnerability scans, TLS cipher analysis or pages behind a login. Returns JSON auditing the HTTP security headers of a public URL (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, cookies) with a grade and fixes for 0.007 USDC per call. Typical response time 2500 ms (p95). Category: Infrastructure. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: http-headers
-  price: 0.007 USDC per call
+  price: "0.007 USDC per call"
   network: eip155:8453
   mcp: blackwood_headers_audit
 ---
@@ -31,6 +31,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

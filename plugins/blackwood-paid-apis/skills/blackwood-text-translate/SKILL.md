@@ -1,10 +1,10 @@
 ---
 name: blackwood-text-translate
-description: Use when you need to translate text, a language translation or a text translation of a sentence or paragraph between two languages. Do not use for formatting that must be preserved, certified or legal translation, or speech (transcribe first). Returns JSON with text translation between about 100 languages by Meta M2M100 1.2B on Workers AI: the translated text with the source and target languages used for 0.012 USDC per call. Typical response time 5000 ms (p95). Category: Inference. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need to translate text, a language translation or a text translation of a sentence or paragraph between two languages. Do not use for formatting that must be preserved, certified or legal translation, or speech (transcribe first). Returns JSON with text translation between about 100 languages by Meta M2M100 1.2B on Workers AI: the translated text with the source and target languages used for 0.012 USDC per call. Typical response time 5000 ms (p95). Category: Inference. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: translate
-  price: 0.012 USDC per call
+  price: "0.012 USDC per call"
   network: eip155:8453
   mcp: blackwood_text_translate
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

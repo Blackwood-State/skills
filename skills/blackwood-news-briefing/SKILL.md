@@ -1,10 +1,10 @@
 ---
 name: blackwood-news-briefing
-description: Use when you need a news briefing, a research summary of recent coverage or an analysis of what the press says about a topic or company. Do not use for breaking news, paywalled pages or one known article (use blackwood_webpage_markdown). Returns JSON with a research briefing on a topic in one call: up to 3 recent GDELT news articles, each read and summarized, with source and link, below the price of separate calls for 0.04 USDC per call. Typical response time 15000 ms (p95). Category: Search. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a news briefing, a research summary of recent coverage or an analysis of what the press says about a topic or company. Do not use for breaking news, paywalled pages or one known article (use blackwood_webpage_markdown). Returns JSON with a research briefing on a topic in one call: up to 3 recent GDELT news articles, each read and summarized, with source and link, below the price of separate calls for 0.04 USDC per call. Typical response time 15000 ms (p95). Category: Search. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: news-briefing
-  price: 0.04 USDC per call
+  price: "0.04 USDC per call"
   network: eip155:8453
   mcp: blackwood_news_briefing
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

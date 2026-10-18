@@ -1,10 +1,10 @@
 ---
 name: blackwood-image-generate
-description: Use when you need image generation, an AI image generator or text to image from a prompt for illustrations, mockups or social posts. Do not use for image edits, specific sizes, photos of real people or more than one image per call. Returns JSON with an AI-generated image from a text prompt: a 1024x1024 JPEG made by FLUX.1 schnell on Workers AI, as base64 for 0.03 USDC per call. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need image generation, an AI image generator or text to image from a prompt for illustrations, mockups or social posts. Do not use for image edits, specific sizes, photos of real people or more than one image per call. Returns JSON with an AI-generated image from a text prompt: a 1024x1024 JPEG made by FLUX.1 schnell on Workers AI, as base64 for 0.03 USDC per call. Result in the same call (about 10000 ms); a status tool polls for free if it takes longer. Category: Media. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: image-gen
-  price: 0.03 USDC per call
+  price: "0.03 USDC per call"
   network: eip155:8453
   mcp: blackwood_image_generate
 ---
@@ -34,6 +34,8 @@ The HTTP call returns `{ jobId, pollUrl }`; poll `pollUrl` (free, no payment) un
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

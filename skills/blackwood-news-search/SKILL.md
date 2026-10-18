@@ -1,10 +1,10 @@
 ---
 name: blackwood-news-search
-description: Use when you need news articles or headlines from the last 72 hours about a topic, company or person. Do not use for full article text, paywalled sources, non-English coverage or news older than 72 hours. Returns JSON with recent news articles matching keywords: headline, URL, source, publish time, authors, tone, image and the people and organizations named, from GDELT for 0.008 USDC per call. Typical response time 600 ms (p95). Category: Search. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need news articles or headlines from the last 72 hours about a topic, company or person. Do not use for full article text, paywalled sources, non-English coverage or news older than 72 hours. Returns JSON with recent news articles matching keywords: headline, URL, source, publish time, authors, tone, image and the people and organizations named, from GDELT for 0.008 USDC per call. Typical response time 600 ms (p95). Category: Search. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: news-headlines
-  price: 0.008 USDC per call
+  price: "0.008 USDC per call"
   network: eip155:8453
   mcp: blackwood_news_search
 ---
@@ -35,6 +35,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

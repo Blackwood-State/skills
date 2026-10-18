@@ -1,10 +1,10 @@
 ---
 name: blackwood-text-sentiment
-description: Use when you need sentiment analysis, text sentiment or opinion mining of reviews, comments or headlines in English. Do not use for neutral or emotion labels, non-English text or aspect-level sentiment. Returns JSON with sentiment analysis of English text: a positive or negative label with a confidence score, from DistilBERT SST-2 on Workers AI, for one text or a batch of up to 20 for 0.004 USDC per call. Typical response time 1500 ms (p95). Category: Inference. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need sentiment analysis, text sentiment or opinion mining of reviews, comments or headlines in English. Do not use for neutral or emotion labels, non-English text or aspect-level sentiment. Returns JSON with sentiment analysis of English text: a positive or negative label with a confidence score, from DistilBERT SST-2 on Workers AI, for one text or a batch of up to 20 for 0.004 USDC per call. Typical response time 1500 ms (p95). Category: Inference. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: sentiment
-  price: 0.004 USDC per call
+  price: "0.004 USDC per call"
   network: eip155:8453
   mcp: blackwood_text_sentiment
 ---
@@ -32,6 +32,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

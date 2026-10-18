@@ -1,10 +1,10 @@
 ---
 name: blackwood-token-price
-description: Use when you need a crypto token price or market data for a Base token, quoted from on-chain liquidity. Do not use for tokens that only trade off Base or on other DEXs (Aerodrome is not read), price history or OHLC. Returns JSON with the USD price of a token on Base computed on-chain from its deepest Uniswap v3 pool against USDC or WETH, with pool, fee tier and depth for 0.003 USDC per call. Typical response time 1200 ms (p95). Category: Trading. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a crypto token price or market data for a Base token, quoted from on-chain liquidity. Do not use for tokens that only trade off Base or on other DEXs (Aerodrome is not read), price history or OHLC. Returns JSON with the USD price of a token on Base computed on-chain from its deepest Uniswap v3 pool against USDC or WETH, with pool, fee tier and depth for 0.003 USDC per call. Typical response time 1200 ms (p95). Category: Trading. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: token-price
-  price: 0.003 USDC per call
+  price: "0.003 USDC per call"
   network: eip155:8453
   mcp: blackwood_token_price
 ---
@@ -31,6 +31,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

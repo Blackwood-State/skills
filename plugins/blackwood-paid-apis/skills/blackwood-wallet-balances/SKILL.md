@@ -1,10 +1,10 @@
 ---
 name: blackwood-wallet-balances
-description: Use when you need a wallet balance, token balances or the ERC20 balance of an address on Base, read live from the chain. Do not use for ethereum mainnet or other chains, NFTs, transaction history or USD values. Returns JSON with the wallet balance of an address on Base: ETH and ERC20 token balances read on-chain in one block, 21 major tokens plus any you list for 0.004 USDC per call. Typical response time 1200 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need a wallet balance, token balances or the ERC20 balance of an address on Base, read live from the chain. Do not use for ethereum mainnet or other chains, NFTs, transaction history or USD values. Returns JSON with the wallet balance of an address on Base: ETH and ERC20 token balances read on-chain in one block, 21 major tokens plus any you list for 0.004 USDC per call. Typical response time 1200 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: wallet-balances
-  price: 0.004 USDC per call
+  price: "0.004 USDC per call"
   network: eip155:8453
   mcp: blackwood_wallet_balances
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

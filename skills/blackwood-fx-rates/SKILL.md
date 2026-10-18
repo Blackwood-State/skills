@@ -1,10 +1,10 @@
 ---
 name: blackwood-fx-rates
-description: Use when you need currency exchange rates, fx rates or forex conversion of an amount between two currencies like EUR and GBP. Do not use for live trading quotes, intraday or crypto rates (ECB rates update once per business day). Returns JSON with currency exchange rates: official ECB euro reference FX rates (free at ecb.europa.eu) for about 30 currencies, rebased to any base as cross rates, with optional conversion for 0.005 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need currency exchange rates, fx rates or forex conversion of an amount between two currencies like EUR and GBP. Do not use for live trading quotes, intraday or crypto rates (ECB rates update once per business day). Returns JSON with currency exchange rates: official ECB euro reference FX rates (free at ecb.europa.eu) for about 30 currencies, rebased to any base as cross rates, with optional conversion for 0.005 USDC per call. Typical response time 1500 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: fx-rates
-  price: 0.005 USDC per call
+  price: "0.005 USDC per call"
   network: eip155:8453
   mcp: blackwood_fx_rates
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

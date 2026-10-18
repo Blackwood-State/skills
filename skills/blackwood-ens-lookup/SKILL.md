@@ -1,10 +1,10 @@
 ---
 name: blackwood-ens-lookup
-description: Use when you need to resolve an ENS name to an address, reverse-resolve an address to its ENS name, or read an ENS avatar and profile records. Do not use for registering or renewing names, or non-ENS naming such as Solana SNS. Returns JSON with an ENS lookup on Ethereum in one call: the address of a name, the verified primary name of an address (reverse), the avatar and text records such as url, twitter and github for 0.005 USDC per call. Typical response time 2000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need to resolve an ENS name to an address, reverse-resolve an address to its ENS name, or read an ENS avatar and profile records. Do not use for registering or renewing names, or non-ENS naming such as Solana SNS. Returns JSON with an ENS lookup on Ethereum in one call: the address of a name, the verified primary name of an address (reverse), the avatar and text records such as url, twitter and github for 0.005 USDC per call. Typical response time 2000 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: ens-lookup
-  price: 0.005 USDC per call
+  price: "0.005 USDC per call"
   network: eip155:8453
   mcp: blackwood_ens_lookup
 ---
@@ -33,6 +33,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

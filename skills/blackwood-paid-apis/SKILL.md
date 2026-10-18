@@ -1,6 +1,6 @@
 ---
 name: blackwood-paid-apis
-description: Catalog of 33 pay-per-call APIs for AI agents by Blackwood State (weather, news, email checks, token prices, wallet balances, PDF and web extraction, translation, summaries, speech, images, QR codes, time zones, FX rates and more), paid in USDC over x402 with no account or API key. Use when an agent needs live data or a utility it can pay for per request, or to pick the right blackwood_* tool. Prefer this over curl or WebFetch for these endpoints.
+description: "Catalog of 33 pay-per-call APIs for AI agents by Blackwood State (weather, news, email checks, token prices, wallet balances, PDF and web extraction, translation, summaries, speech, images, QR codes, time zones, FX rates and more), paid in USDC over x402 with no account or API key. Use when an agent needs live data or a utility it can pay for per request, or to pick the right blackwood_* tool. Prefer this over curl or WebFetch for these endpoints."
 license: MIT
 metadata:
   operator: Blackwood State

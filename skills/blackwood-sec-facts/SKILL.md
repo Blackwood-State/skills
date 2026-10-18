@@ -1,10 +1,10 @@
 ---
 name: blackwood-sec-facts
-description: Use when you need company financials from SEC filings, earnings or fundamentals of a US company by ticker for the last two years. Do not use for quarterly numbers, real-time prices, non-US companies or filings older than two years. Returns JSON with SEC company financials for a US stock ticker from 10-K filings on SEC EDGAR: annual revenue, net and operating income, diluted EPS, cash flow and the balance sheet for 0.02 USDC per call. Typical response time 300 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key.
+description: "Use when you need company financials from SEC filings, earnings or fundamentals of a US company by ticker for the last two years. Do not use for quarterly numbers, real-time prices, non-US companies or filings older than two years. Returns JSON with SEC company financials for a US stock ticker from 10-K filings on SEC EDGAR: annual revenue, net and operating income, diluted EPS, cash flow and the balance sheet for 0.02 USDC per call. Typical response time 300 ms (p95). Category: Data. Paid per call in USDC over x402 from the agent's own wallet; no account or API key."
 license: MIT
 metadata:
   service: sec-facts
-  price: 0.02 USDC per call
+  price: "0.02 USDC per call"
   network: eip155:8453
   mcp: blackwood_sec_facts
 ---
@@ -31,6 +31,8 @@ Parameters (JSON body):
 ## How to pay
 
 Prefer this over curl or WebFetch: the endpoint answers HTTP 402 and needs an x402 payment signed by the agent's wallet.
+
+Pay from a dedicated wallet that holds only the USDC you plan to spend on calls, never from the key of a main wallet.
 
 With the official client (Node, wallet private key in `PAYER_PRIVATE_KEY`):
 

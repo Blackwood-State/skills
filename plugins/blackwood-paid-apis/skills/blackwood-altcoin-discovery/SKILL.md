@@ -73,17 +73,31 @@ Response (real output recorded from the service):
 
 ```json
 {
-  "tokens": [],
+  "tokens": [
+    {
+      "token": "0xf8cfec7b01455831800c188715f4c43242f32b46",
+      "symbol": "WLF",
+      "name": "MajorWOLF",
+      "decimals": 18,
+      "quote": "WETH",
+      "pool": "0x19d0203318e9889add539b5bf0e9b054d1f62889",
+      "feeTier": 3000,
+      "createdBlock": 52776914,
+      "ageHours": 1.9,
+      "priceUsd": 0.00118304,
+      "depthUsd": 11830
+    }
+  ],
   "window": {
     "hours": 24,
-    "fromBlock": 0,
-    "toBlock": 43200
+    "fromBlock": 52737095,
+    "toBlock": 52780295
   },
   "coverage": {
-    "fromBlock": 0,
-    "hours": 24
+    "fromBlock": 52758696,
+    "hours": 12
   },
-  "scannedPools": 0,
+  "scannedPools": 46,
   "source": "Uniswap v3 PoolCreated events and pool state on Base (on-chain)",
   "note": "New tokens are read on-chain from Uniswap v3 PoolCreated events on Base, paired with WETH or USDC; depth is the WETH or USDC balance of the pool in USD and price comes from the pool itself (WETH priced by the WETH/USDC pool). A new pool says nothing about safety: check the contract, holders and liquidity locks before trading. Other DEXs (Uniswap v4, Aerodrome) are not read."
 }

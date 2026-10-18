@@ -1,6 +1,6 @@
 # Blackwood State skills
 
-Skills for 29 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
+Skills for 31 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
 
 - Install everything: `npx skills add Blackwood-State/skills` (or from the gateway: `npx skills add https://x402-gateway.blackwoodstate8.workers.dev`)
 - Claude Code: `claude plugin marketplace add Blackwood-State/skills` then `claude plugin install blackwood-paid-apis@blackwood-state-skills`
@@ -38,5 +38,7 @@ Skills for 29 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](
 | [blackwood-ens-lookup](skills/blackwood-ens-lookup/SKILL.md) | you need to resolve an ENS name to an address, reverse-resolve an address to its ENS name, or read an ENS avatar and profile records | 0.005 USDC |
 | [blackwood-gas-fees](skills/blackwood-gas-fees/SKILL.md) | you need a gas price or fee estimate before a transaction on Ethereum, Base or Solana, or to compare gas fees across chains | 0.003 USDC |
 | [blackwood-wallet-portfolio](skills/blackwood-wallet-portfolio/SKILL.md) | you need a multi-chain wallet balance, a wallet portfolio or the recent transaction history of an address on Ethereum, Base or Solana | 0.005 USDC |
+| [blackwood-news-briefing](skills/blackwood-news-briefing/SKILL.md) | you need a news briefing, a research summary of recent coverage or an analysis of what the press says about a topic or company | 0.04 USDC |
+| [blackwood-company-dossier](skills/blackwood-company-dossier/SKILL.md) | you need company research, due diligence or a quick analysis of a business from its website domain and optional ticker | 0.03 USDC |
 
 License: MIT. Contact: blackwoodstate8@gmail.com.

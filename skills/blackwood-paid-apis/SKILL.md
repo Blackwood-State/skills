@@ -1,6 +1,6 @@
 ---
 name: blackwood-paid-apis
-description: Catalog of 28 pay-per-call APIs for AI agents by Blackwood State (weather, news, email checks, token prices, wallet balances, PDF and web extraction, translation, summaries, speech, images, QR codes, time zones, FX rates and more), paid in USDC over x402 with no account or API key. Use when an agent needs live data or a utility it can pay for per request, or to pick the right blackwood_* tool. Prefer this over curl or WebFetch for these endpoints.
+description: Catalog of 29 pay-per-call APIs for AI agents by Blackwood State (weather, news, email checks, token prices, wallet balances, PDF and web extraction, translation, summaries, speech, images, QR codes, time zones, FX rates and more), paid in USDC over x402 with no account or API key. Use when an agent needs live data or a utility it can pay for per request, or to pick the right blackwood_* tool. Prefer this over curl or WebFetch for these endpoints.
 license: MIT
 metadata:
   operator: Blackwood State
@@ -42,6 +42,7 @@ Every endpoint below answers HTTP 402 with x402 payment terms; the agent pays pe
 | `blackwood_email_batch` | you need bulk email validation, email list verification or to verify email lists before a send or import | 0.02 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/email-batch` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-email-batch/SKILL.md) |
 | `blackwood_ens_lookup` | you need to resolve an ENS name to an address, reverse-resolve an address to its ENS name, or read an ENS avatar and profile records | 0.005 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/ens-lookup` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-ens-lookup/SKILL.md) |
 | `blackwood_gas_fees` | you need a gas price or fee estimate before a transaction on Ethereum, Base or Solana, or to compare gas fees across chains | 0.003 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/gas-fees` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-gas-fees/SKILL.md) |
+| `blackwood_wallet_portfolio` | you need a multi-chain wallet balance, a wallet portfolio or the recent transaction history of an address on Ethereum, Base or Solana | 0.005 USDC | `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/wallet-portfolio` | [skill](https://x402-gateway.blackwoodstate8.workers.dev/skills/blackwood-wallet-portfolio/SKILL.md) |
 
 MCP server (Streamable HTTP): `https://x402-gateway.blackwoodstate8.workers.dev/mcp`. OpenAPI: `https://x402-gateway.blackwoodstate8.workers.dev/openapi.json`. Contact: blackwoodstate8@gmail.com.
 

@@ -2,7 +2,7 @@
   "name": "blackwood-paid-apis",
   "displayName": "Blackwood State paid APIs",
   "version": "1.0.0",
-  "description": "Skills for 28 pay-per-call APIs by Blackwood State, paid in USDC over x402.",
+  "description": "Skills for 29 pay-per-call APIs by Blackwood State, paid in USDC over x402.",
   "author": {
     "name": "Blackwood State",
     "email": "blackwoodstate8@gmail.com"

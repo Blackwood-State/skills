@@ -1,8 +1,8 @@
 {
   "name": "blackwood-paid-apis",
   "displayName": "Blackwood State paid APIs",
-  "version": "1.0.0",
-  "description": "Skills for 33 pay-per-call APIs by Blackwood State, paid in USDC over x402.",
+  "version": "1.1.0",
+  "description": "Skills for 33 pay-per-call APIs by Blackwood State, paid in USDC over x402, and their MCP tools for prepaid-credit keys.",
   "author": {
     "name": "Blackwood State",
     "email": "blackwoodstate8@gmail.com"
@@ -16,5 +16,25 @@
     "pay-per-call",
     "api",
     "agents"
-  ]
+  ],
+  "documentationUrl": "https://github.com/Blackwood-State/skills/tree/main/plugins/blackwood-paid-apis#readme",
+  "supportUrl": "https://github.com/Blackwood-State/skills/issues",
+  "mcpServers": {
+    "blackwood-state": {
+      "type": "http",
+      "url": "https://x402-gateway.blackwoodstate8.workers.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.credits_key}"
+      }
+    }
+  },
+  "userConfig": {
+    "credits_key": {
+      "type": "string",
+      "title": "Blackwood State credits key (optional)",
+      "description": "Prepaid credits key (bwk_...) for the blackwood_* MCP tools; see the plugin README to buy a pack. Leave empty to pay per call over HTTP with an x402 wallet.",
+      "sensitive": true,
+      "default": ""
+    }
+  }
 }

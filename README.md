@@ -3,7 +3,7 @@
 Skills for 33 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](https://x402.org). No account, no API key: the agent pays each call from its own wallet. Generated from the service specifications; do not edit by hand.
 
 - Install everything: `npx skills add Blackwood-State/skills` (or from the gateway: `npx skills add https://x402-gateway.blackwoodstate8.workers.dev`)
-- Claude Code: `claude plugin marketplace add Blackwood-State/skills` then `claude plugin install blackwood-paid-apis@blackwood-state-skills`
+- Claude Code: `claude plugin marketplace add Blackwood-State/skills` then `claude plugin install blackwood-paid-apis@blackwood-state-skills` (skills plus the MCP server for prepaid-credit keys; see [the plugin README](plugins/blackwood-paid-apis/README.md))
 - MCP server (Streamable HTTP): `https://x402-gateway.blackwoodstate8.workers.dev/mcp`
 - OpenAPI: `https://x402-gateway.blackwoodstate8.workers.dev/openapi.json` · llms.txt: `https://x402-gateway.blackwoodstate8.workers.dev/llms.txt`
 

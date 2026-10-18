@@ -10,7 +10,6 @@
       "name": "blackwood-paid-apis",
       "source": "./plugins/blackwood-paid-apis",
       "description": "Pay-per-call APIs for agents by Blackwood State: weather, news, email checks, token prices, PDF and web extraction, translation, speech, images and more, paid in USDC over x402.",
-      "version": "1.0.0",
       "author": {
         "name": "Blackwood State",
         "email": "blackwoodstate8@gmail.com"

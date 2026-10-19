@@ -4,6 +4,8 @@ Skills for 33 pay-per-call APIs for AI agents, paid in USDC on Base over [x402](
 
 - Install everything: `npx skills add Blackwood-State/skills` (or from the gateway: `npx skills add https://x402-gateway.blackwoodstate8.workers.dev`)
 - Claude Code: `claude plugin marketplace add Blackwood-State/skills` then `claude plugin install blackwood-paid-apis@blackwood-state-skills` (skills plus the MCP server for prepaid-credit keys; see [the plugin README](plugins/blackwood-paid-apis/README.md))
+- Any MCP client (stdio, free starting credit, spend caps per call and per day): `npx -y @blackwood-state/mcp` ([npm](https://www.npmjs.com/package/@blackwood-state/mcp))
+- OpenClaw: `openclaw plugins install git:github.com/Blackwood-State/skills@main` · Hermes: `hermes plugins install Blackwood-State/skills` (the server spends money, so Hermes installs it as untrusted)
 - MCP server (Streamable HTTP): `https://x402-gateway.blackwoodstate8.workers.dev/mcp`
 - OpenAPI: `https://x402-gateway.blackwoodstate8.workers.dev/openapi.json` · llms.txt: `https://x402-gateway.blackwoodstate8.workers.dev/llms.txt`
 

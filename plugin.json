@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "blackwood-state",
+  "version": "0.1.0",
+  "description": "Blackwood State: 33 pay-per-call tools for agents (onchain data, ECB exchange rates, text utilities), paid in USDC on Base over x402, with a free starting credit and a spend cap.",
+  "author": {
+    "name": "Blackwood State",
+    "email": "blackwoodstate8@gmail.com"
+  },
+  "homepage": "https://x402-gateway.blackwoodstate8.workers.dev",
+  "repository": "https://github.com/Blackwood-State/skills",
+  "license": "MIT",
+  "keywords": [
+    "x402",
+    "usdc",
+    "base",
+    "mcp",
+    "onchain",
+    "pay-per-call"
+  ],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "blackwood": {
+          "trust": "untrusted"
+        }
+      }
+    }
+  }
+}

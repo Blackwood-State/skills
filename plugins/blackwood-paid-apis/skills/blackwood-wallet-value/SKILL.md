@@ -54,7 +54,9 @@ const res = await fetchWithPayment("https://x402-gateway.blackwoodstate8.workers
 console.log(await res.json());
 ```
 
-With the Coinbase Agentic Wallet CLI: `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/wallet-value --method POST --body '{"address":"0x87DB3C25d1E8E40f8EF240D48a711B0C355CF8Cf","chains":["base"]}'`.
+With a wallet the agent already has (the cap is the price of this call):
+- AgentCash: `npx agentcash fetch https://x402-gateway.blackwoodstate8.workers.dev/v1/wallet-value -m POST -b '{"address":"0x87DB3C25d1E8E40f8EF240D48a711B0C355CF8Cf","chains":["base"]}' --max-amount 0.005`
+- Coinbase Agentic Wallet (after `npx awal auth login`): `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/wallet-value -X POST -d '{"address":"0x87DB3C25d1E8E40f8EF240D48a711B0C355CF8Cf","chains":["base"]}' --max-amount 5000`
 
 Over MCP (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`, payment via `@x402/mcp`): call the tool `blackwood_wallet_value` with the same arguments. Add `"response_format": "detailed"` for the full JSON.
 

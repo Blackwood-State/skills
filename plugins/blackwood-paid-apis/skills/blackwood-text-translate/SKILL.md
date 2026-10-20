@@ -55,7 +55,9 @@ const res = await fetchWithPayment("https://x402-gateway.blackwoodstate8.workers
 console.log(await res.json());
 ```
 
-With the Coinbase Agentic Wallet CLI: `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/translate --method POST --body '{"text":"Pay only for the requests you make.","from":"en","to":"pt"}'`.
+With a wallet the agent already has (the cap is the price of this call):
+- AgentCash: `npx agentcash fetch https://x402-gateway.blackwoodstate8.workers.dev/v1/translate -m POST -b '{"text":"Pay only for the requests you make.","from":"en","to":"pt"}' --max-amount 0.012`
+- Coinbase Agentic Wallet (after `npx awal auth login`): `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/translate -X POST -d '{"text":"Pay only for the requests you make.","from":"en","to":"pt"}' --max-amount 12000`
 
 Over MCP (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`, payment via `@x402/mcp`): call the tool `blackwood_text_translate` with the same arguments. Add `"response_format": "detailed"` for the full JSON.
 

@@ -56,7 +56,9 @@ const res = await fetchWithPayment("https://x402-gateway.blackwoodstate8.workers
 console.log(await res.json());
 ```
 
-With the Coinbase Agentic Wallet CLI: `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/qr-code --method POST --body '{"text":"https://x402-gateway.blackwoodstate8.workers.dev","ecc":"M"}'`.
+With a wallet the agent already has (the cap is the price of this call):
+- AgentCash: `npx agentcash fetch https://x402-gateway.blackwoodstate8.workers.dev/v1/qr-code -m POST -b '{"text":"https://x402-gateway.blackwoodstate8.workers.dev","ecc":"M"}' --max-amount 0.004`
+- Coinbase Agentic Wallet (after `npx awal auth login`): `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/qr-code -X POST -d '{"text":"https://x402-gateway.blackwoodstate8.workers.dev","ecc":"M"}' --max-amount 4000`
 
 Over MCP (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`, payment via `@x402/mcp`): call the tool `blackwood_qrcode_generate` with the same arguments. Add `"response_format": "detailed"` for the full JSON.
 

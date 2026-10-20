@@ -55,7 +55,9 @@ const res = await fetchWithPayment("https://x402-gateway.blackwoodstate8.workers
 console.log(await res.json());
 ```
 
-With the Coinbase Agentic Wallet CLI: `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/timezone --method POST --body '{"time":"2026-11-03T09:00","from":"America/New_York","to":["Europe/London","Asia/Tokyo","America/Sao_Paulo"]}'`.
+With a wallet the agent already has (the cap is the price of this call):
+- AgentCash: `npx agentcash fetch https://x402-gateway.blackwoodstate8.workers.dev/v1/timezone -m POST -b '{"time":"2026-11-03T09:00","from":"America/New_York","to":["Europe/London","Asia/Tokyo","America/Sao_Paulo"]}' --max-amount 0.003`
+- Coinbase Agentic Wallet (after `npx awal auth login`): `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/timezone -X POST -d '{"time":"2026-11-03T09:00","from":"America/New_York","to":["Europe/London","Asia/Tokyo","America/Sao_Paulo"]}' --max-amount 3000`
 
 Over MCP (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`, payment via `@x402/mcp`): call the tool `blackwood_timezone_convert` with the same arguments. Add `"response_format": "detailed"` for the full JSON.
 

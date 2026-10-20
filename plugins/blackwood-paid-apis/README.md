@@ -11,13 +11,13 @@ No hooks, commands, agents, scripts or executables: the plugin runs nothing on y
 
 ## How to pay per call
 
-The endpoints answer HTTP 402 with the price. An x402 client signs the USDC payment with the agent's wallet and repeats the call: `@x402/fetch` in Node (snippet in each skill) or the Coinbase Agentic Wallet CLI (`npx awal x402 pay <url>`). Buyer errors (HTTP 400) and failed calls are not charged.
+The endpoints answer HTTP 402 with the price. An x402 client signs the USDC payment with the agent's wallet and repeats the call: `@x402/fetch` in Node (snippet in each skill) or a wallet CLI the agent already has: `npx agentcash fetch <url> -m POST -b '<json>'` or `npx awal x402 pay <url> -X POST -d '<json>'`. Buyer errors (HTTP 400) and failed calls are not charged.
 
 ## MCP server (prepaid credits)
 
 The plugin also declares the remote MCP server `blackwood-state` (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`): one `blackwood_*` tool per service, the free `blackwood_credits_balance` tool and a free status tool for each long-running service. Claude Code's MCP client does not sign x402 payments, so the paid tools need a prepaid credits key:
 
-1. Buy a pack with one x402 payment from an agent wallet: `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/5` (US$5 for US$5 of calls), `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/20` (US$20 for US$22.222222 of calls), `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/100` (US$100 for US$125 of calls). For example `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/5 --method POST`. Default buyer caps refuse more than US$1 per payment, so raise the cap for that one call.
+1. Buy a pack with one x402 payment from an agent wallet: `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/5` (US$5 for US$5 of calls), `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/20` (US$20 for US$22.222222 of calls), `POST https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/100` (US$100 for US$125 of calls). For example `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/credits/5 -X POST --max-amount 5000000` (the cap is in USDC atomic units). Default buyer caps refuse more than US$1 per payment, so raise the cap for that one call.
 2. Copy the `apiKey` (`bwk_...`) from the first top-up response into the plugin option `credits_key`: run `/plugin configure blackwood-paid-apis@blackwood-state-skills` in a session, or pipe `{"credits_key": "bwk_..."}` to `claude plugin configure blackwood-paid-apis@blackwood-state-skills --values-stdin`. It is a sensitive option, kept in the system credential store and never written to a file.
 3. Every tool call debits the balance; failed calls are not charged. `blackwood_credits_balance` shows the balance and recent debits.
 

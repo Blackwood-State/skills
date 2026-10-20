@@ -57,7 +57,9 @@ const res = await fetchWithPayment("https://x402-gateway.blackwoodstate8.workers
 console.log(await res.json());
 ```
 
-With the Coinbase Agentic Wallet CLI: `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/speech-to-text --method POST --body '{"url":"https://upload.wikimedia.org/wikipedia/commons/b/bb/Neil_Armstrong_small_step.wav"}'`.
+With a wallet the agent already has (the cap is the price of this call):
+- AgentCash: `npx agentcash fetch https://x402-gateway.blackwoodstate8.workers.dev/v1/speech-to-text -m POST -b '{"url":"https://upload.wikimedia.org/wikipedia/commons/b/bb/Neil_Armstrong_small_step.wav"}' --max-amount 0.05`
+- Coinbase Agentic Wallet (after `npx awal auth login`): `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/speech-to-text -X POST -d '{"url":"https://upload.wikimedia.org/wikipedia/commons/b/bb/Neil_Armstrong_small_step.wav"}' --max-amount 50000`
 
 Over MCP (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`, payment via `@x402/mcp`): call the tool `blackwood_audio_transcribe` with the same arguments. Add `"response_format": "detailed"` for the full JSON.
 

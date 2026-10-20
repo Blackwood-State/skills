@@ -54,7 +54,9 @@ const res = await fetchWithPayment("https://x402-gateway.blackwoodstate8.workers
 console.log(await res.json());
 ```
 
-With the Coinbase Agentic Wallet CLI: `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/sentiment --method POST --body '{"texts":["The checkout was fast and the support team was great.","The package arrived broken and nobody answered my emails."]}'`.
+With a wallet the agent already has (the cap is the price of this call):
+- AgentCash: `npx agentcash fetch https://x402-gateway.blackwoodstate8.workers.dev/v1/sentiment -m POST -b '{"texts":["The checkout was fast and the support team was great.","The package arrived broken and nobody answered my emails."]}' --max-amount 0.004`
+- Coinbase Agentic Wallet (after `npx awal auth login`): `npx awal x402 pay https://x402-gateway.blackwoodstate8.workers.dev/v1/sentiment -X POST -d '{"texts":["The checkout was fast and the support team was great.","The package arrived broken and nobody answered my emails."]}' --max-amount 4000`
 
 Over MCP (Streamable HTTP at `https://x402-gateway.blackwoodstate8.workers.dev/mcp`, payment via `@x402/mcp`): call the tool `blackwood_text_sentiment` with the same arguments. Add `"response_format": "detailed"` for the full JSON.
 

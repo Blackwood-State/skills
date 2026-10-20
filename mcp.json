@@ -6,7 +6,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@blackwood-state/mcp@0.1.0"
+        "@blackwood-state/mcp@0.2.0"
       ]
     }
   }
